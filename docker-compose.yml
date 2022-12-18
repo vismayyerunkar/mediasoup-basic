@@ -11,3 +11,6 @@ services:
     ports:
       - "3000:3000"
       - "2000-2020:2000-2020"    
+
+
+# the video that is showing blank is due to the possible error error = https://stackoverflow.com/questions/69974110/mediasoup-webrtc-remote-video-stream-showing-blank-on-ubuntu-server

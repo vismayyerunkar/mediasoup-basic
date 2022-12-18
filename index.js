@@ -1,5 +1,3 @@
-
-
 /* Please follow mediasoup installation requirements */
 /* https://mediasoup.org/documentation/v3/mediasoup/installation/ */
 import express from 'express'
@@ -428,8 +426,12 @@ const createWebRtcTransport = async (router) => {
           {
             // ip: '0.0.0.0', // replace with relevant IP address
             // announcedIp: '10.0.0.115',
-            ip: '0.0.0.0', // replace with relevant IP address
-            announcedIp: '127.0.0.1',
+            // this is inside docker container
+            // ip: '0.0.0.0', // replace with relevant IP address
+            // announcedIp: '127.0.0.1',
+            // only ip is needed in case of outside docker conaincer
+            ip: '192.168.0.107', // replace with relevant IP address
+            // announcedIp: '192.168.0.107',
           }
         ],
         enableUdp: true,
