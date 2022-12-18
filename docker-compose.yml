@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  server:
+    container_name: sfu_test
+    build:
+      context: .  
+    volumes:
+       - .:/usr/app
+       - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+      - "2000-2020:2000-2020"    
